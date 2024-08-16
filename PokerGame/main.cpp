@@ -10,7 +10,7 @@ using std::endl;
 int main()
 {
 	//Card
-	/*Card testCard(ACE, SPADE);
+	Card testCard(ACE, SPADE);
 	Card testCard2(TWO, CLUB);
 	Card testCard3(THREE, DIAMOND);
 	Card testCard4(FOUR, HEART);
@@ -18,7 +18,7 @@ int main()
 	testCard.DisplayCard();
 	testCard2.DisplayCard();
 	testCard3.DisplayCard();
-	testCard4.DisplayCard();*/
+	testCard4.DisplayCard();
 
 	//Deck
 	/*Deck myDeck;
