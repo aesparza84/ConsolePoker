@@ -9,8 +9,8 @@ Player::Player(std::string nameValue, int startValue)
 	name = nameValue;
 
 	//Init currency
-	currency = 0;
-	UpdateCurrency(startValue);
+	credits = 0;
+	AddCredits(startValue);
 };
 
 void Player::SetCardOne(Card newCard)
@@ -23,9 +23,14 @@ void Player::SetCardTwo(Card newCard)
 	_hand.secondCard = newCard;
 }
 
-void Player::UpdateCurrency(int changeVal)
+void Player::AddCredits(int changeVal)
 {
-	currency += changeVal;
+	credits += changeVal;
+}
+
+void Player::TakeCredits(int changeVal)
+{
+	credits -= changeVal;
 }
 
 Card Player::GetCardOne()

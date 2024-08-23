@@ -9,7 +9,7 @@ class Player
 {
 private:
 	Hand _hand;
-	int currency;
+	int credits;
 	std::string name;
 
 public:
@@ -19,7 +19,8 @@ public:
 	void SetCardOne(Card);
 	void SetCardTwo(Card);
 
-	void UpdateCurrency(int);
+	void AddCredits(int);
+	void TakeCredits(int);
 
 	Card GetCardOne();
 	Card GetCardTwo();
