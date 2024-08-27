@@ -1,9 +1,8 @@
 //Declaration file
-#include "Suits.h"
-
-
 #ifndef CARD_H
 #define CARD_H
+
+#include "Suits.h"
 
 class Card
 {

@@ -2,6 +2,7 @@
 #include <cstdlib>
 #include "Card.h"
 #include "Deck.h"
+#include "Table.h"
 
 using std::cout;
 using std::endl;
@@ -9,24 +10,9 @@ using std::endl;
 
 int main()
 {
-	//Card
-	Card testCard(ACE, SPADE);
-	Card testCard2(TWO, CLUB);
-	Card testCard3(THREE, DIAMOND);
-	Card testCard4(FOUR, HEART);
-
-	testCard.DisplayCard();
-	testCard2.DisplayCard();
-	testCard3.DisplayCard();
-	testCard4.DisplayCard();
-
-	//Deck
-	/*Deck myDeck;
-	myDeck.ShuffleDeck();
-	myDeck.ShowDeck();*/
-
-
-
+	Table _table;
+	_table.InitRiver();
+	_table.ShowRiver();
 
 	return 0;
 }

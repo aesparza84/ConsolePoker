@@ -1,10 +1,9 @@
 //Declaration file
-#include <map> 
-#include <string>
-
-
 #ifndef SUITS_H
 #define SUITS_H
+
+#include <map> 
+#include <string>
 
 //Global enum
 enum Suit { CLUB, SPADE, DIAMOND, HEART };

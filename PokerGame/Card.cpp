@@ -15,5 +15,5 @@ Card::Card(Face value, Suit suit)
 
 void Card::DisplayCard()
 {
-	std::cout << FaceToInt[value] << SuitToString[suit] << std::endl;
+	std::cout << FaceToInt[value] << SuitToString[suit] << " ";
 }

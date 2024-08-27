@@ -1,8 +1,8 @@
 //Decleration
-#include "Card.h"
-
 #ifndef HAND_H
 #define HAND_H
+
+#include "Card.h"
 
 struct Hand
 {

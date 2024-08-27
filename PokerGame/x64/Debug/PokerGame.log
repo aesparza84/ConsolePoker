@@ -1,9 +1,2 @@
-﻿  Card.cpp
-  Deck.cpp
-C:\Workspace\ConsolePoker\PokerGame\Deck.cpp(53,11): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-C:\Workspace\ConsolePoker\PokerGame\Deck.cpp(56,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-  main.cpp
-  Player.cpp
-  Suits.cpp
-  Generating Code...
+﻿  main.cpp
   PokerGame.vcxproj -> C:\Workspace\ConsolePoker\x64\Debug\PokerGame.exe

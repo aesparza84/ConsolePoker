@@ -1,5 +1,7 @@
 C:\Workspace\ConsolePoker\PokerGame\Card.cpp;C:\Workspace\ConsolePoker\PokerGame\x64\Debug\Card.obj
 C:\Workspace\ConsolePoker\PokerGame\Deck.cpp;C:\Workspace\ConsolePoker\PokerGame\x64\Debug\Deck.obj
+C:\Workspace\ConsolePoker\PokerGame\GameRunner.cpp;C:\Workspace\ConsolePoker\PokerGame\x64\Debug\GameRunner.obj
 C:\Workspace\ConsolePoker\PokerGame\main.cpp;C:\Workspace\ConsolePoker\PokerGame\x64\Debug\main.obj
 C:\Workspace\ConsolePoker\PokerGame\Player.cpp;C:\Workspace\ConsolePoker\PokerGame\x64\Debug\Player.obj
 C:\Workspace\ConsolePoker\PokerGame\Suits.cpp;C:\Workspace\ConsolePoker\PokerGame\x64\Debug\Suits.obj
+C:\Workspace\ConsolePoker\PokerGame\Table.cpp;C:\Workspace\ConsolePoker\PokerGame\x64\Debug\Table.obj

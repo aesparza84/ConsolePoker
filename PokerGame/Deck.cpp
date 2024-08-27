@@ -7,10 +7,18 @@
 Deck::Deck()
 {
 	CreateDeck();
+	ShuffleDeck();
 };
 
 void Deck::CreateDeck()
 {
+	if (&_deck == NULL)
+	{
+		return;
+	}
+
+	_deck.clear();
+
 	Suit suits[] = {HEART, SPADE, CLUB, DIAMOND};
 
 	Face faces[] = {
@@ -37,20 +45,16 @@ void Deck::CreateDeck()
 	{
 		for (size_t n = 0; n < FaceSize; n++) 
 		{
-			_deck->push_back(Card(faces[n], suits[i]));
+			_deck.push_back(Card(faces[n], suits[i]));
 		}
 	}
 };
 
 void Deck::ShuffleDeck()
 {
-	if (_deck == NULL)
-	{
-		return;
-	}
 
 	int randIndex = -1;
-	int size = _deck->size();
+	int size = _deck.size();
 	Card TempCard;
 
 	srand(time(0));
@@ -59,23 +63,32 @@ void Deck::ShuffleDeck()
 	{
 		randIndex = rand() % size;
 
-		TempCard =(*_deck)[randIndex];
+		TempCard =_deck[randIndex];
+		_shuffledDeck.push(TempCard);
 
-		(*_deck)[randIndex] = (*_deck)[i];
-
-		(*_deck)[i] = TempCard;
+		//(*_deck)[randIndex] = (*_deck)[i];
+		//(*_deck)[i] = TempCard;
 	}
+}
+
+Card Deck::GetNextCard()
+{
+	Card tempCard;
+	tempCard = _shuffledDeck.top();
+	_shuffledDeck.pop();
+	
+	return tempCard;
+}
+
+void Deck::DiscardNext()
+{
+	_shuffledDeck.pop();
 }
 
 void Deck::ShowDeck()
 {
-	if (_deck == NULL)
+	for (size_t i = 0; i < _deck.size(); i++)
 	{
-		return;
-	}
-
-	for (size_t i = 0; i < _deck->size(); i++)
-	{
-		(*_deck)[i].DisplayCard();
+		_deck[i].DisplayCard();
 	}
 }
