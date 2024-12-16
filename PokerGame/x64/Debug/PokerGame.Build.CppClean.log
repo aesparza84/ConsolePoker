@@ -1,8 +1,10 @@
 c:\workspace\consolepoker\pokergame\x64\debug\vc143.pdb
 c:\workspace\consolepoker\pokergame\x64\debug\vc143.idb
+c:\workspace\consolepoker\pokergame\x64\debug\table.obj
 c:\workspace\consolepoker\pokergame\x64\debug\suits.obj
 c:\workspace\consolepoker\pokergame\x64\debug\player.obj
 c:\workspace\consolepoker\pokergame\x64\debug\main.obj
+c:\workspace\consolepoker\pokergame\x64\debug\gamerunner.obj
 c:\workspace\consolepoker\pokergame\x64\debug\deck.obj
 c:\workspace\consolepoker\pokergame\x64\debug\card.obj
 c:\workspace\consolepoker\x64\debug\pokergame.exe

@@ -2,37 +2,33 @@
 #ifndef PLAYER_H
 #define PLAYER_H
 
-#include "Hand.h"
-#include "Table.h"
+#include "Card.h"
+#include<vector>
 #include <string>
 
-enum PlayerAction {CHECK, CALL, FOLD, RAISE};
+enum PlayerAction {HIT, STAY, NONE};
 
 class Player
 {
-private:
-	bool SittingOut;
-	Hand _hand;
-	int credits;
-	int currentBet;
-	std::string name;
-	Table refTable;
+	private:
+		bool SittingOut;
+		int credits;
+		int currentBet;
+		int CardTotal;
+		std::string name;
+		std::vector<Card> P_Hand;
 
-public:
-	Player();
-	Player(std::string, int);
+	public:
+		Player();
+		Player(std::string, int);
 
-	void AssignTable(Table&);
-	void TableAction();
+		PlayerAction TableAction();
 
-	void SetCardOne(Card);
-	void SetCardTwo(Card);
+		void AddCredits(int);
+		void TakeCredits(int);
+		void AddToHand(Card&);
 
-	void AddCredits(int);
-	void TakeCredits(int);
-
-	Card GetCardOne();
-	Card GetCardTwo();
+		void ShowHand();
 };
 
 #endif // !PLAYER_H

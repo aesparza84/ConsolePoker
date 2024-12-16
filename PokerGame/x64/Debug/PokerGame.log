@@ -1,2 +1,3 @@
-﻿  main.cpp
+﻿  Table.cpp
+C:\Workspace\ConsolePoker\PokerGame\Table.cpp(18,11): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
   PokerGame.vcxproj -> C:\Workspace\ConsolePoker\x64\Debug\PokerGame.exe

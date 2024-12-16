@@ -17,64 +17,31 @@ Player::Player(std::string nameValue, int startValue)
 	AddCredits(startValue);
 };
 
-void Player::AssignTable(Table& table)
-{
-	refTable = table;
-}
-
-void Player::TableAction()
+PlayerAction Player::TableAction()
 {
 	if (SittingOut)
+		return NONE; //This player has finished
+
+	int val = -1;
+	std::cin >> val;
+	while (val != 1 && val != 2)
 	{
-		return; //This player has folded
+		//Clear the input flag state 
+		std::cin.clear(); 
+
+		//Clear the input stream for unwatned characters
+		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); 
+		
+		std::cout << "Enter a valid input" << std::endl;
+		
+		//Get input
+		std::cin >> val;
 	}
-
-
-	std::cout << "1. Check\n2. Call\n3. Raise\n4. Fold" << std::endl;
-
-	PlayerAction action = PlayerAction::CHECK;
-	int input = -1;
-
-	while (true)
-	{
-		std::cin >> input;
-		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-
-		if (input > 0 && input < 5)
-		{
-			if (input == 1)
-			{
-				action = PlayerAction::CHECK;
-
-			}
-			else if (input == 2)
-			{
-				action = PlayerAction::CALL;
-			}
-			else if (input == 3)
-			{
-				action = PlayerAction::RAISE;
-			}
-			else if (input == 4)
-			{
-
-			}
-		}
-		else
-		{
-			std::cout << "Not valid input" << std::endl;
-		}
-	}
-}
-
-void Player::SetCardOne(Card newCard)
-{
-	_hand.firstCard = newCard;
-}
-
-void Player::SetCardTwo(Card newCard)
-{
-	_hand.secondCard = newCard;
+	
+	if (val == 1)
+		return HIT;
+	if (val == 2)
+		return STAY;
 }
 
 void Player::AddCredits(int changeVal)
@@ -87,12 +54,15 @@ void Player::TakeCredits(int changeVal)
 	credits -= changeVal;
 }
 
-Card Player::GetCardOne()
+void Player::AddToHand(Card& card)
 {
-	return _hand.firstCard;
+	P_Hand.push_back(card);
 }
 
-Card Player::GetCardTwo()
+void Player::ShowHand()
 {
-	return _hand.secondCard;
+	for (Card c : P_Hand)
+	{
+		c.DisplayCard();
+	}
 }

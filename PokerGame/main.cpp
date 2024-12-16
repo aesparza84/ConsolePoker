@@ -10,9 +10,17 @@ using std::endl;
 
 int main()
 {
-	Table _table;
-	_table.InitRiver();
-	_table.ShowRiver();
+	Table t;
+
+	for (int i = 0; i < 3; i++)
+	{
+		Player p;
+		t.AddPlayer(p);
+	}
+	
+	t.DistributeCards();
+
+	t.DisplayAllHands();
 
 	return 0;
 }

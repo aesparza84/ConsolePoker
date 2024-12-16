@@ -12,12 +12,11 @@ Deck::Deck()
 
 void Deck::CreateDeck()
 {
-	if (&_deck == NULL)
-	{
-		return;
-	}
-
+	//Clear the deck array
 	_deck.clear();
+
+	//Clear the stack
+	_shuffledDeck = std::stack<Card>();
 
 	Suit suits[] = {HEART, SPADE, CLUB, DIAMOND};
 
